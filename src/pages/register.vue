@@ -1,6 +1,6 @@
 <template>
   <div class="register-page">
-    <img src="../assets/bg1.jpeg" alt=""/>
+    <img src="../assets/bg1.jpg" alt=""/>
     <div class="g-register-wrap">
       <div class="u-title">用户注册</div>
       <el-form class="m-form" label-width="90px">
@@ -78,7 +78,7 @@
           this.$message.error("请输入确认密码");
           return false;
         }
-        if (this.password === this.confirmPassword) {
+        if (this.password !== this.confirmPassword) {
           this.$message.error("您两次输入的密码不一致,请重新输入");
           return false;
         }
